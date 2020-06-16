@@ -1,0 +1,17 @@
+Types of Cohesion and Coupling we utilized in our design and our rationale for using them:
+
+Most of our classes have been collated based on the functional cohesion. Board collects
+all board-related material, sets contain only set material, on and off card role only
+contains info on the roles, etc. Our interface has a communication-type cohesion, it
+needs to know a lot of information from the other classes because the players are
+interacting with the game through it. We tried to use functional cohesion for the
+majority of our classes, and did not do any coincidental/accidental cohesion. We contemplated
+pulling the XML parsing into its own class but decided that it fit better in the SetUp
+class and made passing information easier and more self-contained.
+
+For coupling, we tried to stick with the "best" types of coupling. We passed data (data
+coupling) between classes (ex: setup sent parsed xml info to set and scene) and stamp data
+coupling (ex: passing card objects and set objects) for most of the classes. We did not use
+type-use coupling, there are no child-parent inheritance classes. We avoided the "bad" methods
+of coupling. When we considered having XML parsing as its own class, we also considered using
+external coupling.
